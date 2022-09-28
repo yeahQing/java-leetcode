@@ -1,6 +1,7 @@
 package com.yeahqing.structure;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -21,31 +22,41 @@ public class Interval {
         end = e;
     }
 
-    public static List<Interval> createTestData(String data) {
-        List<Interval> list = new ArrayList<>();
-        String[] d = data.substring(1, data.length() - 1).split("],\\[");
+    /***
+     * 输入一维字符串数组，返回整型数组
+     * @param data "[1, 2, 3, 4]"
+     * @return int[]
+     */
+    public static int[] createTestData(String data) {
+        List<Integer> list = new ArrayList<>();
+        String[] d = data.substring(1, data.length() - 1).split(",");
         for (String s : d) {
-            String[] sub = s.split(",");
             // parseInt返回int, valueOf返回Integer
-            list.add(new Interval(Integer.parseInt(sub[0]), Integer.parseInt(sub[1])));
+            list.add(Integer.valueOf(s));
         }
-        return list;
+        int[] nums = new int[list.toArray().length];
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = (int) list.toArray()[i];
+        }
+        return nums;
     }
 
-    public static void print(List<Interval> list) {
+    public static void print(List<Integer> list) {
         if (list == null) {
             System.out.println("null");
             return;
         }
         StringBuilder sb = new StringBuilder();
-        for (Interval interval : list) {
-            sb.append("[")
-                    .append(interval.start)
-                    .append(",")
-                    .append(interval.end)
-                    .append("],");
+        Iterator<Integer> iterator = list.stream().iterator();
+        if (iterator.hasNext()) {
+            sb.append("[").append(iterator.next());
         }
-        System.out.println(sb.substring(0, sb.length() - 1));
+        while (iterator.hasNext()) {
+            Integer val = iterator.next();
+            sb.append(",").append(val);
+        }
+        sb.append("]");
+        System.out.println(sb);
     }
 
 }
