@@ -1,9 +1,9 @@
-package com.yeahqing.easy._0001;
+package com.yeahqing.easy._001;
 
 import com.yeahqing.structure.Interval;
-import com.yeahqing.util.IOUtil;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
 
 /**
  * @author YeahQing
