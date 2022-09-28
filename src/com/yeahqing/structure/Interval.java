@@ -29,6 +29,7 @@ public class Interval {
      */
     public static int[] createTestData(String data) {
         List<Integer> list = new ArrayList<>();
+
         String[] d = data.substring(1, data.length() - 1).split(",");
         for (String s : d) {
             // parseInt返回int, valueOf返回Integer
