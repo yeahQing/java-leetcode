@@ -11,7 +11,9 @@ import java.util.Scanner;
 public class IOUtil {
     public static int[] readNums() {
         Scanner scan = new Scanner(System.in);
+
         String[] arr = scan.nextLine().split(",");
+
         int[] nums = new int[arr.length];
         for (int i = 0; i < nums.length; i++) {
             nums[i] = Integer.parseInt(arr[i]);
