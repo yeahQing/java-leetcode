@@ -1,6 +1,6 @@
 # java-leetcode
 
-The solution of first hundred programming problem for leetcode.
+The solution of the first hundred programming problem for leetcode.
 
 # LeetCode 100
 
