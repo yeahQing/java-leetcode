@@ -10,6 +10,12 @@ import java.util.HashMap;
  * @date 2022/9/28
  */
 class Solution {
+    /***
+     * 1. 两数之和
+     * @param nums 整数数组
+     * @param target 数组中和为target的值
+     * @return int[]
+     */
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
 
