@@ -6,6 +6,7 @@ import java.util.Set;
 /**
  * @author YeahQing
  * @date 2022/10/22
+ * leetcode-160相交链表
  */
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
