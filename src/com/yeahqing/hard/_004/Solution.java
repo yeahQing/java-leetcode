@@ -17,7 +17,6 @@ class Solution {
         if (nums1.length > nums2.length) {
             return findMedianSortedArrays(nums2, nums1);
         }
-
         int m = nums1.length;
         int n = nums2.length;
         int left = 0, right = m;
@@ -45,7 +44,6 @@ class Solution {
                 right = i - 1;
             }
         }
-
         return (m + n) % 2 == 0 ? (median1 + median2) / 2.0 : median1;
     }
 }

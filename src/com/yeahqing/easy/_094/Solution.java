@@ -39,6 +39,5 @@ class Solution {
         dfs(root.left);
         ans.add(root.val);
         dfs(root.right);
-        return;
     }
 }

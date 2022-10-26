@@ -2,17 +2,11 @@ package com.yeahqing.easy._001;
 
 import com.yeahqing.structure.Interval;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 
-/**
- * @author YeahQing
- * @date 2022/9/28
- */
 class Solution {
-    /***
+    /**
      * 1. 两数之和
      * @param nums 整数数组
      * @param target 数组中和为target的值

@@ -1,10 +1,5 @@
 package com.yeahqing.easy._083;
 
-/**
- * @author YeahQing
- * @date 2022/10/25
- */
-
 import com.yeahqing.structure.ListNode;
 
 /**
