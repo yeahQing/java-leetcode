@@ -1,6 +1,6 @@
 # java-leetcode
 
-The solution for [leetcode]("https://leetcode.cn/problemset/all/") by java programing language.
+The solution for leetcode by java programing language.
 
 # LeetCode
 
