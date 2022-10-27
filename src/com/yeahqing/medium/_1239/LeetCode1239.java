@@ -2,6 +2,7 @@ package com.yeahqing.medium._1239;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -13,8 +14,8 @@ import java.util.List;
 
 public class LeetCode1239 {
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        List<String> testCase = new ArrayList<>(Arrays.asList("aa", "bb"));
+        Solution solution = new Solution1();
+        List<String> testCase = new ArrayList<>(Arrays.asList("un", "iq", "ue"));
         System.out.println(solution.maxLength(testCase));
     }
 }
@@ -52,5 +53,30 @@ class Solution {
             dfs(masks, pos + 1, mask | masks.get(pos));
         }
         dfs(masks, pos + 1, mask);
+    }
+}
+
+class Solution1 extends Solution {
+    @Override
+    public int maxLength(List<String> arr) {
+        List<HashSet<Character>> all = new ArrayList<>();
+        all.add(new HashSet<>());
+        int ans = 0;
+        for (String str : arr) {
+            for (int i = 0; i < all.size(); i++) {
+                HashSet<Character> s = all.get(i);
+                // 用一个哈希集合中的元素去构建新的哈希集合
+                HashSet<Character> tmp = new HashSet<>(all.get(i));
+                for (Character c : str.toCharArray()) {
+                    tmp.add(c);
+                }
+                // 当前集合中的字符串和当前字符串没有重复
+                if (tmp.size() == s.size() + str.length()) {
+                    all.add(tmp);
+                    ans = Math.max(ans, tmp.size());
+                }
+            }
+        }
+        return ans;
     }
 }
