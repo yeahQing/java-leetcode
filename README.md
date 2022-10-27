@@ -14,6 +14,7 @@ The solution for leetcode by java programing language.
 |  4  | [100. 相同的树](src/com/yeahqing/easy/_001/Solution.java)          | https://leetcode.cn/problems/same-tree/                          |
 |  5  | [160. 相交链表](src/com/yeahqing/easy/_160/Solution.java)          | https://leetcode.cn/problems/intersection-of-two-linked-lists/   |
 |  6  | [303. 区域和检索 - 数组不可变](src/com/yeahqing/easy/_303/Solution.java) | https://leetcode.cn/problems/range-sum-query-immutable/          |
+|  7  | [21. 合并两个有序链表](src/com/yeahqing/easy/_021/LeetCode021.java)    | https://leetcode.cn/problems/merge-two-sorted-lists/             |
 
 ## Medium
 
