@@ -9,13 +9,8 @@ import java.util.Map;
  * @author YeahQing
  * @date 2022/10/26
  */
-public class Solution {
+class Solution {
     Map<Integer, Integer> map;
-
-    public static void main(String[] args) {
-        Solution s = new Solution();
-        s.buildTree(new int[]{3, 9, 20, 15, 7}, new int[]{9, 3, 15, 20, 7});
-    }
 
     /**
      * @param preorder 先序遍历序列
